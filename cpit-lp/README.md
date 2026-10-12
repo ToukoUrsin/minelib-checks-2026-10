@@ -9,7 +9,7 @@ same-period precedence allowed, at most one extraction per block, first period u
 | Instance | Published CPIT LP upper bound | Exact feasible LP point (this packet) | Exact LP upper bound (dual certificate) |
 |---|---|---|---|
 | KD | 409,498,555 | >= 409,511,619.214132 | <= 409,511,619.267333 |
-| Marvin | 863,916,131 | >= 863,934,504.905759 | <= 863,934,505.094970 |
+| Marvin | 863,916,131 | >= 863,934,504.905759 | <= 863,934,505.094970 (certificate not included) |
 
 The primal points are fractional LP solutions, checked with exact rationals against every original precedence
 arc, resource row and bound. `negative.sol` (predecessor allocations erased) is rejected.
