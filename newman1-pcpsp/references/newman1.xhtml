@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="test.css" />
+    <title>Instance: newman1</title>
+    <!-- Google tag (gtag.js) - GA4 -->
+    <script type="text/javascript" async="async"
+      src="https://www.googletagmanager.com/gtag/js?id=G-B1BRWM59LV"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B1BRWM59LV');
+    </script>
+  </head>
+  <body>
+  <div id="wrap">
+    <div class="navbar">
+      <ul>
+        <li><a href="Help.xhtml">Help</a></li>
+        <li><a href="Datasets.xhtml">Datasets</a></li>
+        <li><a href="Results.xhtml">Results</a></li>
+        <li><a href="Applications.xhtml">Utilities</a></li>
+      </ul>
+    </div>
+    <h1> Instance: newman1 </h1>
+    <a href="jpg/newman1.jpg"><img height="200" src="jpg/newman1.jpg"
+        alt="mine picture" class="mine_image" /></a>
+    <ol id="toc">
+      <li>Contents:</li>
+      <li><a href="#mozTocId218371">Information</a></li>
+      <li><a href="#mozTocId958846">File downloads</a></li>
+      <li><a href="#mozTocId536400">Solution files</a>
+        <ol>
+          <li><a href="#mozTocId777748">UPIT</a></li>
+          <li><a href="#mozTocId341579">CPIT</a></li>
+          <li><a href="#mozTocId782032">PCPSP</a></li>
+        </ol>
+      </li>
+      <li><a href="#mozTocId492052">References</a></li>
+    </ol>
+    <br />
+    <h2><a id="mozTocId218371" class="mozTocH2"></a>Information:</h2>
+    <dl>
+      <dt>Description:</dt>
+        <dd>Mine provided by Alexandra Newman</dd>
+      <dt>Block model:</dt>
+        <dd>1060 blocks of unknown size</dd>
+        <dd>precedence computed using 5 blocks above (+)</dd>
+      <dt>Blockfile columns detail:</dt>
+        <dd>id x y z type grade tonns min_caf value_extracc value_proc
+          apriori_process</dd>
+      <dt>Blockvalue computation</dt>
+        <dd>Extraction cost = tonns * min_caf * 1</dd>
+        <dd>Process benefit: (19.29 * Recovery * Grade - Process_cost) * tonns</dd>
+        <dd>Process cost = 8.195 (if Type=OXOR), 16.862 (if Type=FRWS or FROR)</dd>
+        <dd>Recovery = 90% (if Type=OXOR), 84% (if Type=FRWS or FROR)</dd>
+        <dd>Discount rate = 0.08</dd>
+      <dt>Type of Constraints:</dt>
+        <dd>C0 Capacity constraint (mine): Total extracted tonnage min = 1400000
+          max = 2000000</dd>
+        <dd>C1 Capacity constraint (process): Total processed tonnage min =
+          900000 max = 1100000</dd>
+    </dl>
+    <h2><a id="mozTocId958846" class="mozTocH2"></a>File downloads:</h2>
+    <ul>
+      <li>.blocks file: <a href="data/newman1.blocks">newman1.blocks</a><br />
+      </li>
+      <li>.prec file: <a href="data/newman1.prec">newman1.prec</a></li>
+      <li>.upit file: <a href="data/newman1.upit">newman1.upit</a></li>
+      <li>.cpit file: <a href="data/newman1.cpit">newman1.cpit</a></li>
+      <li>.pcpsp file: <a href="data/newman1.pcpsp">newman1.pcpsp</a></li>
+    </ul>
+    Download the <a href="minelib_format.pdf">Minelib data format specification</a>.
+    <h2><a id="mozTocId536400" class="mozTocH2"></a>Solution files:</h2>
+    <h3><a id="mozTocId777748" class="mozTocH3"></a>UPIT</h3>
+    <dl>
+      <dt>Download: <a href="sols/newman1_upit.sol">newman1_upit.sol</a></dt>
+        <dd>Objective value: 26,086,899</dd>
+        <dd>Computed using Hochbaum's pseudoflow algorithm. <a href="#cite:hochbaumpsudoflow">[*]</a>
+          <br />
+        </dd>
+    </dl>
+    <h3><a id="mozTocId341579" class="mozTocH3"></a>CPIT</h3>
+    <dl>
+      <dt>Download: <a href="sols/newman1_cpit_gmunoz120723.sol">newman1_cpit_gmunoz120723.sol</a></dt>
+        <dd>Objective value: 23,483,671 (LP GAP 4.1%)</dd>
+        <dd>Provided by Gonzalo Muñoz, and obtained from the LP relaxation using
+          a modified TopoSort heuristic. <a href="#cite:gmunoz_tesis">[*]</a></dd>
+      <dt>Download: <a href="sols/newman1.LPcpit">newman1.LPcpit</a></dt>
+        <dd>LP relaxation solution (not feasible)</dd>
+        <dd>Objective value: 24,486,184</dd>
+        <dd>Computed using a modified version of Bienstock &amp; Zuckerberg
+          algorithm. <a href="#cite:bzipco2010">[*]</a></dd>
+    </dl>
+    <h3><a id="mozTocId782032" class="mozTocH3"></a>PCPSP</h3>
+    <dl>
+      <dt>Download: <a href="sols/newman1_pcpsp_gmunoz120723.sol">newman1_pcpsp_gmunoz120723.sol</a></dt>
+        <dd>Objective value: 23,658,230 (LP GAP 3.4%)</dd>
+        <dd>Provided by Gonzalo Muñoz, and obtained from the LP relaxation using
+          a modified TopoSort heuristic.<a href="#cite:gmunoz_tesis">[*]</a></dd>
+      <dt>Download: <a href="sols/newman1.LPcpit">newman1.LPpcpsp</a></dt>
+        <dd>LP relaxation solution (not feasible)</dd>
+        <dd>Objective value: 24,486,549</dd>
+        <dd>Computed using a modified version of Bienstock &amp; Zuckerberg
+          algorithm.<a href="#cite:bzipco2010">[*]</a><br />
+        </dd>
+    </dl>
+    <p></p>
+    <h2><a id="mozTocId492052" class="mozTocH2"></a>References:</h2>
+    <ul class="references">
+      <li><a id="cite:bzipco2010"></a>Daniel Bienstock,
+        Mark Zuckerberg (2010), Solving LP Relaxations of Large-Scale Precedence
+        Constrained Problems. IPCO 2010: 1-14</li>
+      <li><a id="cite:hochbaumpsudoflow"></a>Dorit
+        S. Hochbaum (2008), The Pseudoflow Algorithm: A New Algorithm for the
+        Maximum-Flow Problem. Operations Research 56(4): 992-1009<br />
+      </li>
+      <li><a id="cite:gmunoz_tesis"></a>Gonzalo Muñoz
+        (2012), Modelos de optimizacion lineal entera y aplicaciones a la
+        mineria. Master thesis, Dept. Mathematical Engineering, Universidad de
+        Chile.<br />
+      </li>
+    </ul>
+    <p class="logos">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+    src="http://www.w3.org/Icons/valid-xhtml10-blue" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+    </p>
+    </div>
+  </body>
+</html>

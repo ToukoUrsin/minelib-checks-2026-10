@@ -1,0 +1,31 @@
+{
+  "claim": "Frozen original-input Newman1 PCPSP feasible candidate with exact objective 1762493445729739 / 72900000 = 24176864.8248249657... . This is a candidate, not a claimed new public record.",
+  "evidence_level": "reproduced and independently checked with exact rational arithmetic",
+  "live_comparator": {
+    "url": "https://minelib.org/v1/Results.xhtml",
+    "objective": 23658230,
+    "delta": 518634.8248249657
+  },
+  "stronger_reported_comparator": {
+    "url": "https://www.delphoslab.cl/Publicaciones/2018/Jelvez_et_al_MPES2018.pdf",
+    "table": 4,
+    "objective": 24176861,
+    "delta": 3.8248249657,
+    "evidence_level": "reported OPBSP feasible value; no solution file reproduced"
+  },
+  "publication_margin_scope": "The margin over the strongest found reported value is only 1.58e-7 relative. Coefficient precision, data-version differences, or later records may erase its novelty; semantic review pending.",
+  "solver": {"name": "HiGHS", "version": "1.15.1", "time_cap_seconds": 300, "threads": 4, "seed": 1, "mip_relative_gap_reported": 0.0000009043056989727, "integer_optimality_proven": false},
+  "serialization_repair": "Block 94, destination 1, period 1 increased by 8.9e-16 to restore exact total allocation 1. No block, extraction period, or meaningful destination choice changed. Post-repair exact check passes.",
+  "evidence_files": ["newman1-pcpsp-exact.sol", "exact-check.json", "newman1-pcpsp.json", "../006-bound-certificate/newman1-pcpsp.certificate.json", "../006-bound-certificate/newman1-pcpsp.json", "../006-bound-certificate/negative-claimed-bound.json"],
+  "commands": [
+    "timeout 370 nice -n 19 .venv/bin/python src/solve.py data/raw/newman1.pcpsp data/raw/newman1.prec --mode mip --seconds 300 --threads 4 --gap 0.000001 --warm-start results/003-newman1/newman1-pcpsp-rolling.sol --out results/005-warm-start/newman1-pcpsp",
+    "nice -n 19 .venv/bin/python src/exact_schedule.py data/raw/newman1.pcpsp data/raw/newman1.prec results/005-warm-start/newman1-pcpsp.sol --repair-output results/005-warm-start/newman1-pcpsp-exact.sol --out results/005-warm-start/exact-check.json",
+    "nice -n 19 .venv/bin/python src/certificate_check.py data/raw/newman1.pcpsp data/raw/newman1.prec results/006-bound-certificate/newman1-pcpsp.certificate.json"
+  ],
+  "rational_lp_upper_bound_upward_rounded": "24486549.021618",
+  "upper_bound_scope": "Original Newman1 PCPSP only; reproduced published LP bound, not improved. Bound implies less than 1.287% possible uplift over the rolling baseline here, so 5% is impossible on this original case. No extrapolation to outages or other mines.",
+  "maintainer_validator": "No standalone validator found; official AMPL model and format specification included in review packet.",
+  "submission_policy": "unknown",
+  "submitted": false,
+  "accepted": false
+}

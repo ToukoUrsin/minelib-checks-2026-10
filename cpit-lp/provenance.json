@@ -1,0 +1,25 @@
+{
+  "fetched_utc": "2026-10-06T01:57:03Z",
+  "sources": {
+    "Results.xhtml": {
+      "url": "https://minelib.org/v1/Results.xhtml",
+      "sha256": "72e69c001211e30793b4f1a7f4303a5d7ba5223fb3b136e170e725694b42e2bd",
+      "path": "data/official/refetched/Results.xhtml"
+    },
+    "kd.xhtml": {
+      "url": "https://minelib.org/v1/kd.xhtml",
+      "sha256": "d8be41ffb240c66303a51b8e3ea0df97b3c5e8eceb1d7c39d0fb668971992265",
+      "path": "data/official/refetched/kd.xhtml"
+    },
+    "marvin.xhtml": {
+      "url": "https://minelib.org/v1/marvin.xhtml",
+      "sha256": "79f56ba7855879f02c36b48f6d11d3469056b91ee6cc0bcc05a216f6006c10ce",
+      "path": "data/official/refetched/marvin.xhtml"
+    },
+    "cpit.mod": {
+      "url": "https://minelib.org/v1/utils/cpit.mod",
+      "sha256": "949061c1283b33c52ec4ae18aa78722cc7e93bd825e634ea4a53ae800bfb2cd3",
+      "path": "data/official/refetched/cpit.mod"
+    }
+  }
+}

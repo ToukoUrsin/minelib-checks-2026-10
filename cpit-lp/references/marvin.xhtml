@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html
+  xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="test.css" />
+    <title>Instance: marvin</title>
+    <!-- Google tag (gtag.js) - GA4 -->
+    <script type="text/javascript" async="async"
+      src="https://www.googletagmanager.com/gtag/js?id=G-B1BRWM59LV"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B1BRWM59LV');
+    </script>
+  </head>
+	<body>
+		<div id="wrap">
+    <div class="navbar">
+      <ul>
+        <li><a href="Help.xhtml">Help</a></li>
+        <li><a href="Datasets.xhtml">Datasets</a></li>
+        <li><a href="Results.xhtml">Results</a></li>
+        <li><a href="Applications.xhtml">Utilities</a></li>
+      </ul>
+    </div>
+    <h1> Instance: marvin </h1>
+    <a href="jpg/marvin.jpg"><img height="200px" src="jpg/marvin.jpg"
+        alt="mine picture" class="mine_image" /></a>
+    <ol id="toc">
+      <li id="content">Contents:</li>
+      <li><a href="#mozTocId218371">Information</a></li>
+      <li><a href="#mozTocId958846">File downloads</a></li>
+      <li><a href="#mozTocId536400">Solution files</a>
+        <ol>
+          <li><a href="#mozTocId777748">UPIT</a></li>
+          <li><a href="#mozTocId341579">CPIT</a></li>
+          <li><a href="#mozTocId782032">PCPSP</a></li>
+        </ol>
+      </li>
+      <li><a href="#mozTocId492052">References</a></li>
+    </ol>
+    <br />
+    <h2><a id="mozTocId218371" class="mozTocH2"></a>Information:</h2>
+    <dl>
+      <dt>Description:</dt>
+        <dd>Marvin test mine<br />
+        </dd>
+      <dt>Block model:</dt>
+        <dd>Block size: 30x30x30 meters</dd>
+        <dd>Precedence computed with 45 degrees using 8 levels<br />
+        </dd>
+      <dt>Blockfile columns detail:</dt>
+        <dd>&lt;id&gt; &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;tonn&gt; &lt;au
+          [ppm]&gt; &lt;cu %&gt; &lt;proc_profit&gt;<br />
+        </dd>
+      <dt>Blockvalue computation</dt>
+        <dd>Blockvalues computed using mine cost = 0.9 per ton.</dd>
+        <dd>proc_profit = (AU * Rec_Au * (Price_AU - Selling_AU)) + (CU * Rec_CU
+          * (Price_CU - Selling_CU)) - Proc_cost<br />
+          where Rec_AU = 0.6, Rec_CU = 0.88, Price_AU = 12, Selling_AU = 0.2,
+          Price_CU = 20, Selling_CU = 7.2 and Proc_cost = 4.0<br />
+        </dd>
+        <dd>Discount rate = 0.1</dd>
+        <dd>UPIT/CPIT profit computed processing blocks with &lt;proc_profit&gt;
+          &gt; 0<br />
+        </dd>
+      <dt>Type of Constraints:</dt>
+        <dd>C0 Capacity constraint (mine): Total extracted tonnage &lt; 60M</dd>
+        <dd>C1 Capacity constraint (process): Total processed tonnage &lt; 20M<br />
+          <br />
+        </dd>
+    </dl>
+    <h2><a id="mozTocId958846" class="mozTocH2"></a>File downloads:</h2>
+    <ul>
+      <li>.blocks file: <a href="data/marvin.blocks">marvin.blocks</a><br />
+      </li>
+      <li>.prec file: <a href="data/marvin.prec">marvin.prec</a></li>
+      <li>.upit file: <a href="data/marvin.upit">marvin.upit</a></li>
+      <li>.cpit file: <a href="data/marvin.cpit">marvin.cpit</a></li>
+      <li>.pcpsp file: <a href="data/marvin.pcpsp">marvin.pcpsp</a></li>
+    </ul>
+    Download the <a href="minelib_format.pdf">Minelib data format specification</a>.
+    <h2><a id="mozTocId536400" class="mozTocH2"></a>Solution files:</h2>
+    <h3><a id="mozTocId777748" class="mozTocH3"></a>UPIT</h3>
+    <dl>
+      <dt>Download: <a href="sols/marvin_upit.sol">marvin_upit.sol</a></dt>
+        <dd>Objective value: 1,415,655,436</dd>
+        <dd>Computed using Hochbaum's pseudoflow algorithm. <a href="#cite:hochbaumpsudoflow">[*]</a>
+          <br />
+        </dd>
+    </dl>
+    <h3><a id="mozTocId341579" class="mozTocH3"></a>CPIT</h3>
+    <dl>
+      <dt>Download: <a href="sols/marvin_cpit_gmunoz120723.sol">marvin_cpit_gmunoz120723.sol</a></dt>
+        <dd>Objective value: 820,726,048 (LP GAP 5.0%)</dd>
+        <dd>Provided by Gonzalo Muñoz, and obtained from the LP relaxation using
+          a modified TopoSort heuristic. <a href="#cite:gmunoz_tesis">[*]</a></dd>
+      <dt>Download: <a href="sols/marvin.LPcpit">marvin.LPcpit</a></dt>
+        <dd>LP relaxation solution (not feasible)</dd>
+        <dd>Objective value: 863,916,131</dd>
+        <dd>Computed using a modified version of Bienstock &amp; Zuckerberg
+          algorithm. <a href="#cite:bzipco2010">[*]</a></dd>
+    </dl>
+    <h3><a id="mozTocId782032" class="mozTocH3"></a>PCPSP</h3>
+    <dl>
+      <dt>Download: <a href="sols/marvin_pcpsp_gmunoz120723.sol">marvin_pcpsp_gmunoz120723.sol</a></dt>
+        <dd>Objective value: 885,968,070 (LP GAP 2.8%)</dd>
+        <dd>Provided by Gonzalo Muñoz, and obtained from the LP relaxation using
+          a modified TopoSort heuristic.<a href="#cite:gmunoz_tesis">[*]</a></dd>
+      <dt>Download: <a href="sols/marvin.LPpcpsp">marvin.LPpcpsp</a></dt>
+        <dd>LP relaxation solution (not feasible)</dd>
+        <dd>Objective value: 911,704,665</dd>
+        <dd>Computed using a modified version of Bienstock &amp; Zuckerberg
+          algorithm.<a href="#cite:bzipco2010">[*]</a><br />
+        </dd>
+    </dl>
+    <h2><a id="mozTocId492052" class="mozTocH2"></a>References:</h2>
+    <ul class="references">
+      <li><a id="cite:bzipco2010"></a>Daniel Bienstock,
+        Mark Zuckerberg (2010), Solving LP Relaxations of Large-Scale Precedence
+        Constrained Problems. IPCO 2010: 1-14</li>
+      <li><a id="cite:hochbaumpsudoflow"></a>Dorit
+        S. Hochbaum (2008), The Pseudoflow Algorithm: A New Algorithm for the
+        Maximum-Flow Problem. Operations Research 56(4): 992-1009<br />
+      </li>
+      <li><a id="cite:gmunoz_tesis"></a>Gonzalo Muñoz
+        (2012), Modelos de optimizacion lineal entera y aplicaciones a la
+        mineria. Master thesis, Dept. Mathematical Engineering, Universidad de
+        Chile.<br />
+      </li>
+    </ul>
+    <p class="logos">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+    src="http://www.w3.org/Icons/valid-xhtml10-blue" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+    </p>
+    </div>
+  </body>
+</html>

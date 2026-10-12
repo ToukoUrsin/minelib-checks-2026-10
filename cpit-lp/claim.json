@@ -1,0 +1,52 @@
+{
+  "claim": "Exact rational feasible CPIT LP witnesses exceed current published LP upper-bound figures for KD and Marvin using current original ASCII data. Separately checked rational upper certificates tightly bracket their LP objectives. A current table/data inconsistency candidate, not an integer schedule record or tighter bound.",
+  "live_comparator": {
+    "url": "https://minelib.org/v1/Results.xhtml",
+    "refetched_utc": "2026-10-06T01:57:03Z"
+  },
+  "measured": [
+    {
+      "mine": "kd",
+      "published_lp_upper_bound": 409498555,
+      "exact_feasible_lp_objective_downward": "409511619.214132",
+      "exact_dual_upper_bound_upward": "409511619.267333",
+      "difference_above_reported": 13064.214132371984,
+      "model_sha256": "b29fd925dafc445be40a8b6a8903641830fad66eb5da62a17925d89b8959af2b",
+      "precedence_sha256": "c0b2a0bddb82dbaebbc9e61af777c53749ce932d6d14ef6e91d4229337a4ad13",
+      "solution_sha256": "ba6a1dda040475028a1aff8e1d0006c321ea8054d8feef703c0894f4e7b9dc5d"
+    },
+    {
+      "mine": "marvin",
+      "published_lp_upper_bound": 863916131,
+      "exact_feasible_lp_objective_downward": "863934504.905759",
+      "exact_dual_upper_bound_upward": "863934505.094970",
+      "difference_above_reported": 18373.9057598982,
+      "model_sha256": "afd66712efde3b1520b9a218c27d529bc8e06a001a2cc1d1222c763456904a08",
+      "precedence_sha256": "40798a8950101c3af399b4fcd92d7ebb3872604a973f30d28d9939524ff2291f",
+      "solution_sha256": "4ff13b98238db0c6b701c0f47316547c14f45353af7a1edb847b48e0c7fe821e"
+    }
+  ],
+  "evidence_level": "exact rational original-input LP primal and dual upper certificates independently checked; semantic discrepancy under review",
+  "evidence_files": [
+    "kd.sol",
+    "kd.json",
+    "marvin.sol",
+    "marvin.json",
+    "live-provenance.json",
+    "../014-bz/kd.json",
+    "../014-bz/marvin.json",
+    "data/generated/kd-bz.certificate.json",
+    "data/generated/marvin-bz.certificate.json"
+  ],
+  "commands": [
+    "python src/exact_lp_export.py data/raw/kd.cpit data/raw/kd.prec results/014-bz/kd.sol --out results/016-exact-lp/kd.sol",
+    "python src/exact_lp_export.py data/raw/marvin.cpit data/raw/marvin.prec results/014-bz/marvin.sol --out results/016-exact-lp/marvin.sol"
+  ],
+  "limitations": [
+    "LP witnesses are fractional, not integer schedules",
+    "old solver/data history unknown; no cause assumed",
+    "larger LP value is not a tighter upper-bound improvement"
+  ],
+  "submitted": false,
+  "accepted": false
+}
